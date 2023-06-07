@@ -1,0 +1,9 @@
+  {% for label, messages in app.flashes %}
+        {% for message in messages %}
+        <div class="alert alert-{{label}} d-flex align-items-center" role="alert">
+            <div>
+                {{message}}
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}

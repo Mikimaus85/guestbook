@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="container">
+    <h1>Gästebuch</h1>
+    {% include 'messages.html.twig' %}
+    {{form(guestBookForm)}}
+    {% for entry in entries %}
+        {% include 'entry.html.twig' %}
+    {% endfor %}
+    {% include 'pagination.html.twig' %}
+</div>
+{% endblock %}
